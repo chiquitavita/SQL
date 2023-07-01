@@ -1,0 +1,12 @@
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER, price INTEGER, quantity_sold INTEGER);
+       ^creating a table format
+INSERT INTO books VALUES(1, "Divergent", 5, 20, 4);
+INSERT INTO books VALUES(2, "Dr. Suess", 4, 5, 1);
+INSERT INTO books VALUES(3, "The Road", 5, 15, 3);
+INSERT INTO books VALUES(4, "Persepolis", 5, 10, 5);
+INSERT INTO books VALUES(5, "In Cold Blood", 3, 12, 3);
+       ^inserting data into the database table
+SELECT * FROM books ORDER BY id;
+       ^selecting all the date to place into one cohesive chart
+SELECT name, SUM(quantity_sold) FROM books GROUP BY name;
+       ^selecting the quantitiy, to visualize the sum of all books sold
