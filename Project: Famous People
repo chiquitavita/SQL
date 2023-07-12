@@ -1,0 +1,36 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE movie_stars (id INTEGER PRIMARY KEY, name TEXT, movie TEXT, rating INTEGER, married TEXT);
+INSERT INTO movie_stars VALUES (1, "Will Smith","bad boys for life", 76, "yes");
+INSERT INTO movie_stars VALUES (2, "Robert Downey Jr.", "Richard III", 96, "yes");
+INSERT INTO movie_stars VALUES (3, "Chris Evans", "Captin America: Civil War", 90, "no");
+INSERT INTO movie_stars VALUES (4, "Leonardo Dicaprio", "Titanic", 88, "no");
+INSERT INTO movie_stars VALUES (5, "Jenna Ortega", "Scream VI", 76, "no");
+INSERT INTO movie_stars VALUES (6, "Scarlet Johansson", "Lucy", 67, "yes");
+INSERT INTO movie_stars VALUES (7, "Jennifer Lawrence", "The Hunger Games", 84, "yes");
+INSERT INTO movie_stars VALUES (8, "Margot Robbie", "Babylon", 56, "yes");
+
+CREATE TABLE singers (id INTEGER PRIMARY KEY, name TEXT, song TEXT, city_born TEXT, views INTEGER);
+INSERT INTO singers VALUES (1, "Justin Beiber", "Baby", "London, Ontario", 3000000000);
+INSERT INTO singers VALUES (2, "Ed Sheeran", "Thinking Out Loud", "Halifax, West Yorkshire", 1698000000);
+INSERT INTO singers VALUES (3, "Zayn Malik", "Pillowtalk", "Bradford", 1200000000);
+INSERT INTO singers VALUES (4, "The Weeknd", "After Hours", "Toronto", 38300000000);
+INSERT INTO singers VALUES (5, "Billie Eilish", "ocean eyes", "Los Angeles", 440300000);
+INSERT INTO singers VALUES (6, "Ariana Grande", "God is a Woman",  "Boca Raton, Florida", 167900000);
+INSERT INTO singers VALUES (7, "Taylor Swift", "Mastermind", "West Reading, Pennsylvania", 9900000);
+INSERT INTO singers VALUES (8, "Selena Gomez", "Calm Down", "Grand Prairie, Texas", 539900000);
+
+
+CREATE TABLE authors (id INTEGER PRIMARY KEY, name TEXT, book_title TEXT, price INTEGER);
+INSERT INTO authors VALUES (1, "J. K. Rowling", "Harry Potter 7 book series", 39);
+INSERT INTO authors VALUES (2, "Cormac McCarthy", "The Road", 6);
+INSERT INTO authors VALUES (3, "George Saunders", "Lincoln in the Bardo", 4);
+INSERT INTO authors VALUES (4, "Ian McEwan", "Atonement", 5);
+
+CREATE TABLE fictional_characters (id INTEGER PRIMARY KEY, name TEXT, personality_type TEXT, age INTEGER);
+INSERT INTO fictional_characters VALUES (1, "Hermione Granger", "logical & kind", 11);
+INSERT INTO fictional_characters VALUES (2, "The boy", "strong & resilient", 10);
+INSERT INTO fictional_characters VALUES (3, "Roger Bevins", "kind & helpful", 14);
+INSERT INTO fictional_characters VALUES (4, "Robbie Turner",  "ambitious & kind", 23);
+
+SELECT * FROM authors JOIN fictional_characters ON authors.id = fictional_characters.id;
